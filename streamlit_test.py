@@ -83,9 +83,10 @@ def evaluation(airline_test, pred):
     cf_matrix = confusion_matrix(airline_test, pred)
     st.text("정확도: {0:.4f}".format(acc))
     st.text("정밀도: {0:.4f}".format(pre))
-    print("재현율: {0:.4f}".format(rec))
-    print("f1 score: {0:.4f}".format(f1))
-    print("roc_auc_score: {0:.4f}".format(roc))
+    st.text("재현율: {0:.4f}".format(rec))
+    st.text("f1 score: {0:.4f}".format(f1))
+    st.text("roc_auc_score: {0:.4f}".format(roc))
+    fig = plt.figure()
     group_names = ['TN','FP','FN','TP']
     group_counts = ["{0:0.0f}".format(value) for value in cf_matrix.flatten()]
     group_percentages = ["{0:.2%}".format(value) for value in cf_matrix.flatten() / np.sum(cf_matrix)]
@@ -95,7 +96,7 @@ def evaluation(airline_test, pred):
     plt.ylabel('True')
     plt.xlabel('Predicted')
     plt.show()
-    
+    st.pyplot(fig)
     
 # 결정트리
 from sklearn.tree import DecisionTreeClassifier
