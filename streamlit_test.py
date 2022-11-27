@@ -15,6 +15,9 @@ airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_Ai
 st.header("데이터 확인")
 st.table(airline.head(10))
 
+st.markdown("<br>")
+st.markdown("<br>")
+st.markdown("<br>")
 
 airline2 = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/test.csv")
 
