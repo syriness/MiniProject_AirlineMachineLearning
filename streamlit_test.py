@@ -1,5 +1,6 @@
 # 필요 라이브러리 import
 import pandas as pd
+import matplotilb.pyplot as plt
 import streamlit as st
 import kmeans
 import prepro
