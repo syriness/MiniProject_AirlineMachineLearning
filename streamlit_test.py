@@ -85,7 +85,7 @@ def evaluation(airline_test, pred):
     st.markdown('<span style="color: LightPink; font-size:120%">**정확도:**</span> <span style="color: SeaGreen; font-size:110%">{0:.4f}</span>'.format(acc), unsafe_allow_html=True)
     st.markdown('<span style="color: PaleVioletRed; font-size:120%">**정밀도:**</span> <span style="color: SeaGreen; font-size:110%">{0:.4f}</span>'.format(pre), unsafe_allow_html=True)
     st.markdown('<span style="color: LightBlue; font-size:120%">**재현율:**</span> <span style="color: SeaGreen; font-size:110%">{0:.4f}</span>'.format(rec), unsafe_allow_html=True)
-    st.markdown('<span style="color: PaleTurquoise; font-size:120%">**fl score:**</span> <span style="color: SeaGreen; font-size:110%">{0:.4f}</span>'.format(f1), unsafe_allow_html=True)
+    st.markdown('<span style="color: PaleTurquoise; font-size:120%">**f1 score:**</span> <span style="color: SeaGreen; font-size:110%">{0:.4f}</span>'.format(f1), unsafe_allow_html=True)
     st.markdown('<span style="color: DeepSkyBlue; font-size:120%">**roc_auc_score:**</span> <span style="color: SeaGreen; font-size:110%">{0:.4f}</span>'.format(roc), unsafe_allow_html=True)
     st.write("정밀도: {0:.4f}".format(pre))
     st.write("재현율: {0:.4f}".format(rec), "   /   ", "f1 score: {0:.4f}".format(f1), "   /   ", "roc_auc_score: {0:.4f}".format(roc))
