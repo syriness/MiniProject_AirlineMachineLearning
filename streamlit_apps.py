@@ -74,4 +74,4 @@ st.write("")
 st.write("")
 st.write("")
 
-st.markdown('<span style="color: MidnightBlue; font-size:250%"><center>**Thank You!**</center></span>', unsafe_allow_html=True)
+st.markdown('<center><span style="color: MidnightBlue; font-size:250%">**Thank You!**</span></center>', unsafe_allow_html=True)
