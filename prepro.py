@@ -25,4 +25,4 @@ def preprocess(airline, airline2):
     X = airline_score.drop(["satisfaction"], axis=1)
     y = airline_score["satisfaction"]
     
-    return X, y, airline_test, airline_test_X
+    return X, y, airline_test_X, airline_test
