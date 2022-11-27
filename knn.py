@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 
 def neighbors(X, y, airline_test_X, airline_test):
-    st.head("KNN 학습 결과")
+    st.header("KNN 학습 결과")
     
     scaler5 = StandardScaler()
     
