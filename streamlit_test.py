@@ -66,7 +66,7 @@ st.header("결정트리 학습 결과")
 dt = DecisionTreeClassifier(max_depth=20, min_samples_leaf=5, min_samples_split=100, random_state=100)
 dt.fit(X, y)
 pred_dt = dt.predict(airline_test_X)
-eval.evaluation(airline_test, pred_dt)
+evaluation(airline_test, pred_dt)
 # accuracy: 0.9324, precision: 0.9373, recall: 0.9066, fl score: 0.9217, roc_auc_score: 0.9296
 
 st.write("")
