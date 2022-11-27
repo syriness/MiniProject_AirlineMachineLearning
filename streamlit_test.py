@@ -5,7 +5,7 @@ import streamlit as st
 import kmeans
 import prepro
 import logic
-
+import tree
 
 # streamlit 앱 제목
 st.title("항공사 고객 만족도 Machine Learning")
@@ -34,3 +34,9 @@ st.write("")
 st.write("")
 
 logic.logic_reg(X, y, airline_test_X, airline_test)
+
+st.write("")
+st.write("")
+st.write("")
+
+tree.decision_(X, y, airline_test_X, airline_test)
