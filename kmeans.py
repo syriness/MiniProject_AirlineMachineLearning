@@ -40,6 +40,7 @@ def kmeans_clustering(airline, airline2):
   ax.plot(range(1, 11), sse, marker="o")
   st.pyplot(f)
   
+  st.markdown("<br>")
   st.subheader("실루엣 스코어")
   silhouette_list = [0.2531, 0.3307, 0.2750, 0.2595, 0.2833, 0.2697, 0.2782, 0.2842, 0.2842, 0.2865]
   for i in range(2, 11):
@@ -57,6 +58,7 @@ def kmeans_clustering(airline, airline2):
   group_size = airline_personal_kmeans[["KMeans", "Gender"]].groupby(["KMeans"]).count().rename(columns={"Gender":"Group_Size"})
   group_size["Group_Proportion"] = group_size["Group_Size"] / group_size["Group_Size"].sum()
   
+  st.markdown("<br>")
   st.subheader("훈련셋 군집화 결과")
   
   f, ax = plt.subplots(figsize=(18, 12))
@@ -79,6 +81,7 @@ def kmeans_clustering(airline, airline2):
                                                   "Gender"]].groupby(["KMeans"]).count().rename(columns={"Gender":"Group_Size"})
   group_size_test["Group_Proportion"] = group_size_test["Group_Size"] / group_size_test["Group_Size"].sum()
   
+  st.markdown("<br>")
   st.subheader("시험셋 군집화 결과")
   
   g, ax = plt.subplots(figsize=(18, 12))
