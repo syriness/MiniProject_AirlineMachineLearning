@@ -81,8 +81,8 @@ def evaluation(airline_test, pred):
     f1 = f1_score(airline_test, pred)
     roc = roc_auc_score(airline_test, pred)
     cf_matrix = confusion_matrix(airline_test, pred)
-    st.write("정확도: {0:.4f}".format(acc), "    정밀도: {0:.4f}".format(pre))
-    st.write("재현율: {0:.4f}".format(rec), "    f1 score: {0:.4f}".format(f1), "    roc_auc_score: {0:.4f}".format(roc))
+    st.write("정확도: {0:.4f}".format(acc), "       ", "정밀도: {0:.4f}".format(pre))
+    st.write("재현율: {0:.4f}".format(rec), "       ", "f1 score: {0:.4f}".format(f1), "       ", "roc_auc_score: {0:.4f}".format(roc))
     fig = plt.figure()
     group_names = ['TN','FP','FN','TP']
     group_counts = ["{0:0.0f}".format(value) for value in cf_matrix.flatten()]
