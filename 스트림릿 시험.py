@@ -11,4 +11,4 @@ st.title("항공사 고객 만족도 Machine Learning")
 # 데이터 읽어오기
 airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/train.csv")
 
-st.dataframe(airline)
+st.table(airline.head())
