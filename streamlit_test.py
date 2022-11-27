@@ -82,7 +82,8 @@ def evaluation(airline_test, pred):
     f1 = f1_score(airline_test, pred)
     roc = roc_auc_score(airline_test, pred)
     cf_matrix = confusion_matrix(airline_test, pred)
-    st.write("정확도: {0:.4f}".format(acc), "   /   ", "정밀도: {0:.4f}".format(pre))
+    st.markdown('<span style="color: LightPink; font-size:150%">**정확도**</span>: {0:.4f}'.format(temp), unsafe_allow_html=True)
+    st.write("정밀도: {0:.4f}".format(pre))
     st.write("재현율: {0:.4f}".format(rec), "   /   ", "f1 score: {0:.4f}".format(f1), "   /   ", "roc_auc_score: {0:.4f}".format(roc))
     fig = plt.figure()
     group_names = ['TN','FP','FN','TP']
@@ -117,5 +118,3 @@ dt.imp = pd.DataFrame({"satisfaction":X.columns, "values":dt.feature_importances
 fig_dt = plt.figure(figsize=(20, 10))
 sns.barplot(x="values", y= "satisfaction", data=dt.imp.sort_values(by="values", ascending=False))
 st.pyplot(fig_dt)
-temp = 1.246844
-st.markdown('<span style="color: red">**정확도: {0:.4f}**</span>'.format(temp), unsafe_allow_html=True)
