@@ -27,10 +27,10 @@ airline.dropna(inplace=True)
     
 kmeans.kmeans_clustering(airline, airline2)   
     
-X, y, airline_test, airline_test_X = prepro.preprocess(airline, airline2)
+X, y, airline_test_X, airline_test = prepro.preprocess(airline, airline2)
     
 st.write("")
 st.write("")
 st.write("")
 
-logic.logic_reg(X, y, airline_test, airline_test_X)
+logic.logic_reg(X, y, airline_test_X, airline_test)
