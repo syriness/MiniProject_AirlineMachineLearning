@@ -62,7 +62,7 @@ st.write("")
 st.write("")
 st.write("")
 
-light.light_(X, y, airline_test_X, airline_test)
+#light.light_(X, y, airline_test_X, airline_test)
 
 st.write("")
 st.write("")
