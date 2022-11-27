@@ -19,6 +19,7 @@ airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_Ai
 
 st.header("데이터 확인")
 st.table(airline.head(10))
+st.write("원 데이터셋에 약 10만개의 데이터가 있으며, 훈련셋에는 약 26,000개의 데이터가 있다.")
 
 st.write("")
 st.write("")
