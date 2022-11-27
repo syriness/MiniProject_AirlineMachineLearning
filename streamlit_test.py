@@ -109,4 +109,5 @@ evaluation(airline_test, pred_dt)
 dt.imp = pd.DataFrame({"satisfaction":X.columns, "values":dt.feature_importances_})
 
 plt.figure(figsize=(20, 10))
-sns.barplot(x="values", y= "satisfaction", data=dt.imp.sort_values(by="values", ascending=False))
+# sns.barplot(x="values", y= "satisfaction", data=dt.imp.sort_values(by="values", ascending=False))
+st.bar_chart(dt.imp.sort_values(by="values", ascending=False), x="values", y= "satisfaction", width=20, height=10)
