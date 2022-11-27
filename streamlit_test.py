@@ -7,6 +7,7 @@ import prepro
 import logic
 import tree
 import forest
+import xg
 
 # streamlit 앱 제목
 st.title("항공사 고객 만족도 Machine Learning")
@@ -47,3 +48,9 @@ st.write("")
 st.write("")
 
 forest.random_(X, y, airline_test_X, airline_test)
+
+st.write("")
+st.write("")
+st.write("")
+
+xg.xg_ensemble(X, y, airline_test_X, airline_test)
