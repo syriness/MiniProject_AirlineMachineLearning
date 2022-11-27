@@ -9,6 +9,7 @@ import tree
 import forest
 import xg
 import light
+import knn
 
 # streamlit 앱 제목
 st.title("항공사 고객 만족도 Machine Learning")
@@ -28,7 +29,7 @@ airline2.dropna(inplace=True)
 
 airline.dropna(inplace=True)
     
-#kmeans.kmeans_clustering(airline, airline2)   
+kmeans.kmeans_clustering(airline, airline2)   
     
 X, y, airline_test_X, airline_test = prepro.preprocess(airline, airline2)
     
@@ -36,28 +37,40 @@ st.write("")
 st.write("")
 st.write("")
 
-#logic.logic_reg(X, y, airline_test_X, airline_test)
+logic.logic_reg(X, y, airline_test_X, airline_test)
 
 st.write("")
 st.write("")
 st.write("")
 
-#tree.decision_(X, y, airline_test_X, airline_test)
+tree.decision_(X, y, airline_test_X, airline_test)
 
 st.write("")
 st.write("")
 st.write("")
 
-#forest.random_(X, y, airline_test_X, airline_test)
+forest.random_(X, y, airline_test_X, airline_test)
 
 st.write("")
 st.write("")
 st.write("")
 
-#xg.xg_ensemble(X, y, airline_test_X, airline_test)
+xg.xg_ensemble(X, y, airline_test_X, airline_test)
 
 st.write("")
 st.write("")
 st.write("")
 
 light.light_(X, y, airline_test_X, airline_test)
+
+st.write("")
+st.write("")
+st.write("")
+
+knn.neighbors(X, y, airline_test_X, airline_test)
+
+st.write("")
+st.write("")
+st.write("")
+
+st.markdown('<span style="color: MidnightBlue; font-size:250%"><center>**Thank You!**</center></span>', unsafe_allow_html=True)
