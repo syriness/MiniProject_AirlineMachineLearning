@@ -4,6 +4,7 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix
 import numpy as np
 import seaborn as sns
+import streamlit as st
 
 def evaluation(airline_test, pred):
     acc = accuracy_score(airline_test, pred)
