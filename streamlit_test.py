@@ -6,6 +6,7 @@ import kmeans
 import prepro
 import logic
 import tree
+import forest
 
 # streamlit 앱 제목
 st.title("항공사 고객 만족도 Machine Learning")
@@ -40,3 +41,9 @@ st.write("")
 st.write("")
 
 tree.decision_(X, y, airline_test_X, airline_test)
+
+st.write("")
+st.write("")
+st.write("")
+
+forest.random_(X, y, airline_test_X, airline_test)
