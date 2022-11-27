@@ -11,7 +11,7 @@ st.title("항공사 고객 만족도 Machine Learning")
 # 데이터 읽어오기
 airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/train.csv")
 
-st.dataframe(airline)
+st.table(airline.head(10))
 
 
 # 데이터 정보 확인
@@ -81,8 +81,8 @@ def evaluation(airline_test, pred):
     f1 = f1_score(airline_test, pred)
     roc = roc_auc_score(airline_test, pred)
     cf_matrix = confusion_matrix(airline_test, pred)
-    print("정확도: {0:.4f}".format(acc))
-    print("정밀도: {0:.4f}".format(pre))
+    st.txt("정확도: {0:.4f}".format(acc))
+    st.txt("정밀도: {0:.4f}".format(pre))
     print("재현율: {0:.4f}".format(rec))
     print("f1 score: {0:.4f}".format(f1))
     print("roc_auc_score: {0:.4f}".format(roc))
