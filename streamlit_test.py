@@ -1,8 +1,8 @@
 # 필요 라이브러리 import
 import pandas as pd
-import matplotlib.pyplot as plt
 import streamlit as st
 import kmeans
+import prepro
 
 
 # streamlit 앱 제목
@@ -20,58 +20,13 @@ st.write("")
 st.write("")
 
 airline2 = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/test.csv")
-
-airline2.isnull().sum()
 airline2.dropna(inplace=True)
 
-
-# 데이터 정보 확인
-airline.info()
-
-
-# null값 확인
-airline.isnull().sum()
-
-
-# 데이터 수에 비해 null값이 작기 때문에 그냥 제거함
 airline.dropna(inplace=True)
     
 kmeans.kmeans_clustering(airline, airline2)   
     
-# satisfaction 컬럼 인코딩
-from sklearn.preprocessing import LabelEncoder
-
-encoder = LabelEncoder() 
-encoder.fit(airline["satisfaction"])
-airline["satisfaction"] = encoder.transform(airline["satisfaction"])
-
-
-# 시험셋도 미리 불러오고 인코딩
-airline_test = airline2["satisfaction"]
-airline_test_X = airline2.iloc[:, 8:24]
-
-encoder2 = LabelEncoder()
-encoder2.fit(airline_test)
-airline_test = encoder2.transform(airline_test)
-
-airline_test_X.info()
-airline_test_X.astype(int)
-
-
-# 고객 평가지표 데이터프레임
-airline_score = airline.iloc[:, 8:24]
-
-
-# 학습 전 데이터 전처리
-airline_score.info()
-airline_score.astype(int) # 컬럼 하나가 실수형이라 정수형으로 바꿔줌
-airline_score["satisfaction"] = airline["satisfaction"]
-
-
-# X, y 정의
-X = airline_score.drop(["satisfaction"], axis=1)
-y = airline_score["satisfaction"]
-
+X, y, airline_test, airline_test_X = prepro.preprocess(airline, airline2)
 
 # 평가지표 함수 정의
 from sklearn.metrics import accuracy_score, precision_score, recall_score
