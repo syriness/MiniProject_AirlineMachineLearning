@@ -110,4 +110,4 @@ dt.imp = pd.DataFrame({"satisfaction":X.columns, "values":dt.feature_importances
 
 plt.figure(figsize=(20, 10))
 # sns.barplot(x="values", y= "satisfaction", data=dt.imp.sort_values(by="values", ascending=False))
-st.bar_chart(dt.imp.sort_values(by="values", ascending=False), x="values", y= "satisfaction", width=20, height=10)
+st.bar_chart(dt.imp.sort_values(by="values", ascending=False), x="values", y= "satisfaction")
