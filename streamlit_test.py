@@ -117,4 +117,5 @@ dt.imp = pd.DataFrame({"satisfaction":X.columns, "values":dt.feature_importances
 fig_dt = plt.figure(figsize=(20, 10))
 sns.barplot(x="values", y= "satisfaction", data=dt.imp.sort_values(by="values", ascending=False))
 st.pyplot(fig_dt)
-st.markdown('<span style="color: red">**정확도: {0:.4f}**</span>'.format(acc), unsafe_allow_html=True)
+temp = 1.246844
+st.markdown('<span style="color: red">**정확도: {0:.4f}**</span>'.format(temp), unsafe_allow_html=True)
