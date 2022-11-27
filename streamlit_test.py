@@ -2,6 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
+import kmeans
 
 
 # streamlit 앱 제목
@@ -15,6 +16,12 @@ st.header("데이터 확인")
 st.table(airline.head(10))
 
 
+airline2 = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/test.csv")
+
+airline2.isnull().sum()
+airline2.dropna(inplace=True)
+
+
 # 데이터 정보 확인
 airline.info()
 
@@ -26,6 +33,7 @@ airline.isnull().sum()
 # 데이터 수에 비해 null값이 작기 때문에 그냥 제거함
 airline.dropna(inplace=True)
     
+kmeans.kmeans_clustering(airline, airline2)   
     
 # satisfaction 컬럼 인코딩
 from sklearn.preprocessing import LabelEncoder
@@ -36,11 +44,6 @@ airline["satisfaction"] = encoder.transform(airline["satisfaction"])
 
 
 # 시험셋도 미리 불러오고 인코딩
-airline2 = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/test.csv")
-
-airline2.isnull().sum()
-airline2.dropna(inplace=True)
-
 airline_test = airline2["satisfaction"]
 airline_test_X = airline2.iloc[:, 8:24]
 
