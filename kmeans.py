@@ -47,7 +47,7 @@ def kmeans_clustering(airline, airline2):
       if i == 3:
           st.markdown('<span style="color: SteelBlue; font-size:120%">**군집 3개: 0.3307**</span>', unsafe_allow_html=True)
       else:
-          st.markdown('<span style="color: Gray"> 군집 %d개: %f</span>' % (i, silhouette_list[i-2]), unsafe_allow_html=True)
+          st.markdown('<span style="color: Gray"> 군집 %d개: %.4f</span>' % (i, silhouette_list[i-2]), unsafe_allow_html=True)
           
   airline_personal_kmeans = airline_personal.copy()
   kmeans = KMeans(n_clusters=3, init="k-means++", random_state=100, max_iter=1000)
