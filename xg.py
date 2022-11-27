@@ -21,8 +21,9 @@ def xg_ensemble(X, y, airline_test_X, airline_test):
     
     column_imp_xg = shap.TreeExplainer(xg)
     shap_values_xg = column_imp_xg.shap_values(airline_test_X)
-
-    fig = shap.summary_plot(shap_values_xg, airline_test_X, plot_type="bar")
+    
+    fig = plt.figure(figsize=(15, 10))
+    shap.summary_plot(shap_values_xg, airline_test_X, plot_type="bar")
     st.pyplot(fig)
     
     st.write("")
