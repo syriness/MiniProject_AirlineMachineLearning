@@ -1,6 +1,6 @@
 pandas
 matplotlib==3.5.2
-LabelEncoder
+LabelEncoder==1.0.2
 StandardScaler
 KMeans
 silhouette_score
