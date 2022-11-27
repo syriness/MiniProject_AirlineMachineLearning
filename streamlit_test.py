@@ -90,8 +90,6 @@ def evaluation(airline_test, pred):
     st.markdown('<span style="color: LightBlue; font-size:120%">**재현율:**</span> <span style="color: SeaGreen; font-size:110%">{0:.4f}</span>'.format(rec), unsafe_allow_html=True)
     st.markdown('<span style="color: PaleTurquoise; font-size:120%">**f1 score:**</span> <span style="color: SeaGreen; font-size:110%">{0:.4f}</span>'.format(f1), unsafe_allow_html=True)
     st.markdown('<span style="color: DeepSkyBlue; font-size:120%">**roc_auc_score:**</span> <span style="color: SeaGreen; font-size:110%">{0:.4f}</span>'.format(roc), unsafe_allow_html=True)
-    st.write("정밀도: {0:.4f}".format(pre))
-    st.write("재현율: {0:.4f}".format(rec), "   /   ", "f1 score: {0:.4f}".format(f1), "   /   ", "roc_auc_score: {0:.4f}".format(roc))
     fig = plt.figure()
     group_names = ['TN','FP','FN','TP']
     group_counts = ["{0:0.0f}".format(value) for value in cf_matrix.flatten()]
@@ -125,5 +123,3 @@ dt.imp = pd.DataFrame({"satisfaction":X.columns, "values":dt.feature_importances
 fig_dt = plt.figure(figsize=(20, 10))
 sns.barplot(x="values", y= "satisfaction", data=dt.imp.sort_values(by="values", ascending=False))
 st.pyplot(fig_dt)
-
-aa.printing("hello world!")
