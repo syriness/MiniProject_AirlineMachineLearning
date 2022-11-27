@@ -81,8 +81,8 @@ def evaluation(airline_test, pred):
     f1 = f1_score(airline_test, pred)
     roc = roc_auc_score(airline_test, pred)
     cf_matrix = confusion_matrix(airline_test, pred)
-    st.text("정확도: {0:.4f}".format(acc))
-    st.text("정밀도: {0:.4f}".format(pre))
+    st.write("정확도: {0:.4f}".format(acc))
+    st.write("정밀도: {0:.4f}".format(pre))
     st.text("재현율: {0:.4f}".format(rec))
     st.text("f1 score: {0:.4f}".format(f1))
     st.text("roc_auc_score: {0:.4f}".format(roc))
@@ -101,11 +101,15 @@ def evaluation(airline_test, pred):
 # 결정트리
 from sklearn.tree import DecisionTreeClassifier
 
+st.header("결정트리 학습 결과")
+
 dt = DecisionTreeClassifier(max_depth=20, min_samples_leaf=5, min_samples_split=100, random_state=100)
 dt.fit(X, y)
 pred_dt = dt.predict(airline_test_X)
 evaluation(airline_test, pred_dt)
 # accuracy: 0.9324, precision: 0.9373, recall: 0.9066, fl score: 0.9217, roc_auc_score: 0.9296
+
+st.subheader("결정트리 학습 시 중요한 변수들")
 
 dt.imp = pd.DataFrame({"satisfaction":X.columns, "values":dt.feature_importances_})
 
