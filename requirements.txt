@@ -1,5 +1,5 @@
 pandas
-matplotlib.pyplot
+matplotlib.pyplot == 3.5.1
 LabelEncoder
 StandardScaler
 KMeans
