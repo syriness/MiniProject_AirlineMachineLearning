@@ -27,7 +27,7 @@ airline2.dropna(inplace=True)
 
 airline.dropna(inplace=True)
     
-kmeans.kmeans_clustering(airline, airline2)   
+#kmeans.kmeans_clustering(airline, airline2)   
     
 X, y, airline_test_X, airline_test = prepro.preprocess(airline, airline2)
     
