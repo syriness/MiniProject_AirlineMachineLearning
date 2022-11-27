@@ -79,7 +79,7 @@ def kmeans_clustering(airline, airline2):
                                                   "Gender"]].groupby(["KMeans"]).count().rename(columns={"Gender":"Group_Size"})
   group_size_test["Group_Proportion"] = group_size_test["Group_Size"] / group_size_test["Group_Size"].sum()
   
-  st.subheader("셋 군집화 결과")
+  st.subheader("시험셋 군집화 결과")
   
   g, ax = plt.subplots(figsize=(18, 12))
   ax.pie(group_size_test["Group_Proportion"], 
