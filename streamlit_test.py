@@ -35,19 +35,19 @@ st.write("")
 st.write("")
 st.write("")
 
-logic.logic_reg(X, y, airline_test_X, airline_test)
+#logic.logic_reg(X, y, airline_test_X, airline_test)
 
 st.write("")
 st.write("")
 st.write("")
 
-tree.decision_(X, y, airline_test_X, airline_test)
+#tree.decision_(X, y, airline_test_X, airline_test)
 
 st.write("")
 st.write("")
 st.write("")
 
-forest.random_(X, y, airline_test_X, airline_test)
+#forest.random_(X, y, airline_test_X, airline_test)
 
 st.write("")
 st.write("")
