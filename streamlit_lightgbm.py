@@ -43,8 +43,8 @@ Cleanliness =r5_col2.slider("Cleanliness",0,5)
 
 # 여섯번째 행
 r6_col1, r6_col2 = st.columns(2)
-Departure_Delay_in_Minutes	=r6_col1.slider("Departure_Delay_in_Minutes ",0,30)
-Arrival_Delay_in_Minutes=r6_col2.slider("Departure_Delay_in_Minutes ",0 ,30)
+Departure_Delay_in_Minutes=r6_col1.slider("Departure_Delay_in_Minutes ",0,30)
+Arrival_Delay_in_Minutes=r6_col2.slider("Arrival_Delay_in_Minutes ",0 ,30)
 
 # 예측 버튼
 predict_button = st.button("예측")
