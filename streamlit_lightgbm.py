@@ -62,7 +62,7 @@ if predict_button1:
     if pred == 1:
         st.metric("만족 여부 예측 결과", "Satisfied")
     else:
-        st.metric("만족 여부 예측 결과", "Dissatisfied)
+        st.metric("만족 여부 예측 결과", "Dissatisfied")
     
     # st.metric("만족 여부 예측결과", pred)
   
@@ -76,7 +76,7 @@ if predict_button2:
     if pred == 1:
         st.metric("만족 여부 예측 결과", "Satisfied")
     else:
-        st.metric("만족 여부 예측 결과", "Dissatisfied)
+        st.metric("만족 여부 예측 결과", "Dissatisfied")
  
 
 st.markdown('**<center><span style="color: MidnightBlue; font-size:250%">Thank You!</span></center>**', unsafe_allow_html=True)
