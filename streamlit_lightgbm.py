@@ -47,8 +47,7 @@ Departure_Delay_in_Minutes=r6_col1.slider("Departure_Delay_in_Minutes ",0,30)
 Arrival_Delay_in_Minutes=r6_col2.slider("Arrival_Delay_in_Minutes ",0 ,30)
 
 # 예측 버튼
-predict_button1 = st.button("LightGBM 예측")
-predict_button2 = st.button("XGBoost 예측")
+predict_button1, predict_button2 = st.button("LightGBM 예측"), st.button("XGBoost 예측")
 
 st.write("---")
 
