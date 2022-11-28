@@ -27,8 +27,8 @@ def light_(X, y, airline_test_X, airline_test):
     st.write("")
     st.subheader("LightGBM의 feature importance")
     
-    xg.imp = pd.DataFrame({'features': X.columns, 'values': xg.feature_importances_})
+    gbm.imp = pd.DataFrame({'features': X.columns, 'values': gbm.feature_importances_})
 
     fig2 = plt.figure(figsize=(20, 10))
-    sns.barplot(x='values', y='features', data=xg.imp.sort_values(by='values', ascending=False))
+    sns.barplot(x='values', y='features', data=gbm.imp.sort_values(by='values', ascending=False))
     st.pyplot(fig2)
