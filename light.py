@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 import eval
-# import shap
+import shap
 import lightgbm as lgb
 
 def light_(X, y, airline_test_X, airline_test):
@@ -14,15 +14,15 @@ def light_(X, y, airline_test_X, airline_test):
     pred_gbm = gbm.predict(airline_test_X)
     eval.evaluation(airline_test, pred_gbm)
     
-    # st.write("")
-    # st.subheader("LightGBM Shap Value")
+    st.write("")
+    st.subheader("LightGBM Shap Value")
     
-    # column_imp_gbm = shap.TreeExplainer(gbm)
-    # shap_values_gbm = column_imp_gbm.shap_values(airline_test_X)
+    column_imp_gbm = shap.TreeExplainer(gbm)
+    shap_values_gbm = column_imp_gbm.shap_values(airline_test_X)
     
-    # fig = plt.figure(figsize=(15, 10))
-    # shap.summary_plot(shap_values_gbm, airline_test_X, plot_type="bar")
-    # st.pyplot(fig)
+    fig = plt.figure(figsize=(15, 10))
+    shap.summary_plot(shap_values_gbm, airline_test_X, plot_type="bar")
+    st.pyplot(fig)
     
     st.write("")
     st.subheader("LightGBM의 feature importance")
