@@ -52,68 +52,19 @@ predict_button = st.button("만족도 예측")
 st.write("---")
 
 # 예측 결과
-if predict_button:
-    model1 = joblib.load('LR_model.pkl')
-    model2 = joblib.load('KNN_model.pkl')
-    model3 = joblib.load('DT_model.pkl')
-    model4 = joblib.load('RandomForestClassifier_model.pkl')
-    model5 = joblib.load('xgb_model.pkl')
-    model6 = joblib.load('LightGBM_model.pkl')
-
-    pred1 = model1.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
-    Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
-    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, 
-    Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
-    pred2 = model2.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
-    Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
-    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, 
-    Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
-    pred3 = model3.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
-    Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
-    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, 
-    Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
-    pred4 = model4.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
-    Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
-    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, 
-    Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
-    pred5 = model5.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
-    Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
-    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, 
-    Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
-    pred6 = model6.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
-    Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
-    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, 
-    Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
+model_list = ['LR_model.pkl', 'KNN_model.pkl', 'DT_model.pkl', 'RandomForestClassifier_model.pkl', 'xgb_model.pkl', 'LightGBM_model.pkl']
+for i in range(1, 7):
+    if predict_button:
+        modeli = joblib.load(model_list[i-1])
+        predi = model1.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
+        Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
+        Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, 
+        Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
+        
+        if predi == 1:
+            st.metric("로지스틱 회귀 결과", "Satisfied")
+        else:
+            st.metric("로지스틱 회귀 결과", "Dissatisfied")
     
-    if pred1 == 1:
-        st.metric("로지스틱 회귀 결과", "Satisfied")
-    else:
-        st.metric("로지스틱 회귀 결과", "Dissatisfied")
-  
-    if pred2 == 1:
-        st.metric("KNN 결과", "Satisfied")
-    else:
-        st.metric("KNN 결과", "Dissatisfied")
-    
-    if pred3 == 1:
-        st.metric("결정트리 결과", "Satisfied")
-    else:
-        st.metric("결정트리 결과", "Dissatisfied")
-  
-    if pred4 == 1:
-        st.metric("랜덤 포레스트 결과", "Satisfied")
-    else:
-        st.metric("랜덤 포레스트 결과", "Dissatisfied")
-  
-    if pred5 == 1:
-        st.metric("XGBoost 결과", "Satisfied")
-    else:
-        st.metric("XGBoost 결과", "Dissatisfied")
-  
-    if pred6 == 1:
-        st.metric("LightGBM 결과", "Satisfied")
-    else:
-        st.metric("LightGBM 결과", "Dissatisfied")
-
 st.write("")                              
 st.markdown('**<center><span style="color: MidnightBlue; font-size:250%">Thank You!</span></center>**', unsafe_allow_html=True)
