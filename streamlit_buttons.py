@@ -56,7 +56,7 @@ model_list = ['LR_model.pkl', 'KNN_model.pkl', 'DT_model.pkl', 'RandomForestClas
 for i in range(1, 7):
     if predict_button:
         modeli = joblib.load(model_list[i-1])
-        predi = model1.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
+        predi = modeli.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
         Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
         Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, 
         Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
