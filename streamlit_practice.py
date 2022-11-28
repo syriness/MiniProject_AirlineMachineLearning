@@ -117,17 +117,17 @@ if predict_button5:
    else:
        st.metric("만족 여부 예측 결과", "Dissatisfied")
         
- if predict_button6:
-    model = joblib.load('LightGBM_model.pkl')
+if predict_button6:
+   model = joblib.load('LightGBM_model.pkl')
 
-    pred = model.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
-    Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
-    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
+   pred = model.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
+   Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
+   Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
 
-    if pred == 1:
-        st.metric("만족 여부 예측 결과", "Satisfied")
-    else:
-        st.metric("만족 여부 예측 결과", "Dissatisfied")
+   if pred == 1:
+       st.metric("만족 여부 예측 결과", "Satisfied")
+   else:
+       st.metric("만족 여부 예측 결과", "Dissatisfied")
 
 st.write("")                              
 st.markdown('**<center><span style="color: MidnightBlue; font-size:250%">Thank You!</span></center>**', unsafe_allow_html=True)
