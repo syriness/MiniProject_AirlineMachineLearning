@@ -47,12 +47,13 @@ Departure_Delay_in_Minutes=r6_col1.slider("Departure_Delay_in_Minutes ",0,30)
 Arrival_Delay_in_Minutes=r6_col2.slider("Arrival_Delay_in_Minutes ",0 ,30)
 
 # 예측 버튼
-predict_button = st.button("예측")
+predict_button1 = st.button("LightGBM 예측")
+predict_button2 = st.button("XGBoost 예측")
 
 st.write("---")
 
 # 예측 결과
-if predict_button:
+if predict_button1:
     model = joblib.load('LightGBM_model.pkl')
 
     pred = model.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
@@ -60,5 +61,15 @@ if predict_button:
     Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
 
     st.metric("만족 여부 예측결과", pred)
+  
+if predict_button2:
+    model = joblib.load('xgb_model.pkl')
+
+    pred = model.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
+    Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
+    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
+
+    st.metric("만족 여부 예측결과", pred)
+ 
 
 st.markdown('**<center><span style="color: MidnightBlue; font-size:250%">Thank You!</span></center>**', unsafe_allow_html=True)
