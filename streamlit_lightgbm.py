@@ -55,9 +55,9 @@ st.write("---")
 if predict_button:
     model = joblib.load('LightGBM_model.pkl')
 
-    pred = model.predict(np.array([[Inflight_wifi_servic, Departure_Arrival_time_convenient,
-    Ease_of_Online_booking,Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
-    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes햇]]))
+    pred = model.predict(np.array([[Inflight_wifi_service, Departure_Arrival_time_convenient,
+    Ease_of_Online_booking, Gate_location, Food_and_drink, Online_boarding, Seat_comfort,
+    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
 
     st.metric("만족 여부 예측결과", pred)
 
