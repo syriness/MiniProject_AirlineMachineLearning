@@ -65,9 +65,9 @@ if predict_button1:
     Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
     
     if pred == 1:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Satisfied")
+        st.metric("만족 여부 예측 결과", "Satisfied")
     else:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Dissatisfied")
+        st.metric("만족 여부 예측 결과", "Dissatisfied")
   
 if predict_button2:
     model = joblib.load('KNN_model.pkl')
@@ -77,9 +77,9 @@ if predict_button2:
     Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
 
     if pred == 1:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Satisfied")
+        st.metric("만족 여부 예측 결과", "Satisfied")
     else:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Dissatisfied")
+        st.metric("만족 여부 예측 결과", "Dissatisfied")
       
 if predict_button3:
     model = joblib.load('DT_model.pkl')
@@ -89,9 +89,9 @@ if predict_button3:
     Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
 
     if pred == 1:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Satisfied")
+        st.metric("만족 여부 예측 결과", "Satisfied")
     else:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Dissatisfied")
+        st.metric("만족 여부 예측 결과", "Dissatisfied")
   
 if predict_button4:
     model = joblib.load('RandomForestClassifier_model.pkl')
@@ -101,9 +101,9 @@ if predict_button4:
     Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
 
     if pred == 1:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Satisfied")
+        st.metric("만족 여부 예측 결과", "Satisfied")
     else:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Dissatisfied")
+        st.metric("만족 여부 예측 결과", "Dissatisfied")
         
 if predict_button5:
    model = joblib.load('xgb_model.pkl')
@@ -113,9 +113,9 @@ if predict_button5:
    Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
 
    if pred == 1:
-       st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Satisfied")
+       st.metric("만족 여부 예측 결과", "Satisfied")
    else:
-       st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Dissatisfied")
+       st.metric("만족 여부 예측 결과", "Dissatisfied")
         
  if predict_button6:
     model = joblib.load('LightGBM_model.pkl')
@@ -125,9 +125,9 @@ if predict_button5:
     Inflight_entertainment, On_board_service, Leg_room_service, Baggage_handling, Check_in_service, Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
 
     if pred == 1:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Satisfied")
+        st.metric("만족 여부 예측 결과", "Satisfied")
     else:
-        st.metric(st.markdown('<span style="color: LightSteelBlue>"**만족 여부 예측 결과**"</span>, unsafe_allow_html=True), "Dissatisfied")
+        st.metric("만족 여부 예측 결과", "Dissatisfied")
 
 st.write("")                              
 st.markdown('**<center><span style="color: MidnightBlue; font-size:250%">Thank You!</span></center>**', unsafe_allow_html=True)
