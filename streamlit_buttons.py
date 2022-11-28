@@ -53,6 +53,7 @@ st.write("---")
 
 # 예측 결과
 model_list = ['LR_model.pkl', 'KNN_model.pkl', 'DT_model.pkl', 'RandomForestClassifier_model.pkl', 'xgb_model.pkl', 'LightGBM_model.pkl']
+result_list = ["로지스틱 회귀 결과", "KNN 결과", "결정트리 결과", "랜덤 포레스트 결과", "XGBoost 결과", "LightGBM 결과"]
 for i in range(1, 7):
     if predict_button:
         model = joblib.load(model_list[i-1])
@@ -62,9 +63,9 @@ for i in range(1, 7):
         Inflight_service, Cleanliness,Departure_Delay_in_Minutes,Arrival_Delay_in_Minutes]]))
         
         if pred == 1:
-            st.metric("로지스틱 회귀 결과", "Satisfied")
+            st.metric(result_list[i-1], "Satisfied")
         else:
-            st.metric("로지스틱 회귀 결과", "Dissatisfied")
+            st.metric(result_list[i-1], "Dissatisfied")
     
 st.write("")                              
 st.markdown('**<center><span style="color: MidnightBlue; font-size:250%">Thank You!</span></center>**', unsafe_allow_html=True)
