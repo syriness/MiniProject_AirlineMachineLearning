@@ -4,7 +4,7 @@ import streamlit as st
 import joblib
 
 st.title("항공기 만족도 예측")
-st.write("LightGBM모델을 활용")
+st.write("모델을 활용")
 
 # 첫 번째 행
 r1_col1, r1_col2, r1_col3 = st.columns(3)
