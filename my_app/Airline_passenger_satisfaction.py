@@ -12,7 +12,7 @@ def page():
 
 
 page_names_to_funcs = {
-    "Practice": Practice,
+    "Practice": practice,
      "Page": page,
 }
 
