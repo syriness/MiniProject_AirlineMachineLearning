@@ -26,7 +26,7 @@ st.markdown('**<center><span style="color: #000000; font-size:250%; line-height:
 # 데이터 읽어오기
 airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/train.csv")
 
-st.markdown('**<center><span style="color: #666666; font-size:100%; line-height:2.2">raw data</span></center>**', unsafe_allow_html=True)
+st.markdown('**<center><span style="color: #666666; font-size:100%; line-height:2.2">-raw data-</span></center>**', unsafe_allow_html=True)
 #st.table(airline.head(10))
 st.dataframe(data=airline.head(10), width=None, height=None,  use_container_width=False)
 
