@@ -17,6 +17,9 @@ from PIL import Image
 import xgboost as xgb
 import shap
 
+image = 'https://image.cnbcfm.com/api/v1/image/107124573-1664221269888-gettyimages-463523885-1[…]d06fa636af6.jpeg?v=1668095693&w=740&h=416&ffmt=webp&vtcrop=y'
+st.image(image)
+
 # streamlit 앱 제목
 st.title("항공사 고객 만족도 Machine Learning Data view")
 
@@ -24,7 +27,9 @@ st.title("항공사 고객 만족도 Machine Learning Data view")
 airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/train.csv")
 
 st.header("데이터 확인")
-st.table(airline.head(10))
+#st.table(airline.head(10))
+st.dataframe(data=airline.head(10), width=None, height=None,  use_container_width=False)
+
 st.write("원 데이터셋에 약 10만개의 데이터가 있으며, 훈련셋에는 약 26,000개의 데이터가 있다.")
 
 # st.write("")
