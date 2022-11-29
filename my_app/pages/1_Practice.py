@@ -13,8 +13,8 @@ import joblib
 image = 'https://www.sisajournal.com/news/photo/201907/188115_92491_371.jpg'
 st.image(image)
 
-st.markdown('**<center><span style="color: #000000; font-size:250%; line-height:1.2">항공기 만족도 예측 </span></center>**', unsafe_allow_html=True)
-st.markdown('**<center><span style="color: #333333; font-size:150%; line-height:2.2">6가지 머신러닝 모델 활용으로 변수들을 바꾸어 예측해보기</span></center>**', unsafe_allow_html=True)
+st.markdown('**<center><span style="color: #000000; font-size:250%; line-height:1.0">항공기 만족도 예측 </span></center>**', unsafe_allow_html=True)
+st.markdown('**<center><span style="color: #666666; font-size:150%; line-height:2.2">6가지 머신러닝 모델 활용으로 변수들을 바꾸어 예측해보기</span></center>**', unsafe_allow_html=True)
 #st.markdown('**<center><span style="color: #000000; font-size:150%"> </span></center>**', unsafe_allow_html=True)
 
 # 첫 번째 행
