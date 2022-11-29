@@ -10,7 +10,7 @@ import streamlit as st
 import joblib
 
 
-image = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fhub.zum.com%2F3hoursahead%2F90507&psig=AOvVaw2cHqqs5KGMMxrquFhziPBk&ust=1669785408553000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLimm8PR0vsCFQAAAAAdAAAAABAR'
+image = 'https://www.sisajournal.com/news/photo/201907/188115_92491_371.jpg'
 st.image(image)
 
 st.sidebar.markdown("# Practice")
