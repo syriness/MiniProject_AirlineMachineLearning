@@ -19,6 +19,8 @@ import shap
 
 # streamlit 앱 제목
 st.markdown('**<center><span style="color: #000000; font-size:250%; ">Machine Learning Model view</span></center>**', unsafe_allow_html=True)
+st.markdown('<center><span style="color: #666666; font-size:100%;">use model : K-Means, 로지스틱 회귀, 결정트리, 랜덤 포레스트, XGBoost, LightGBM, KNN</span></center>', unsafe_allow_html=True)
+
 st.markdown('---')
 
 # 데이터 읽어오기
