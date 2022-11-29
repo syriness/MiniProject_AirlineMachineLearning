@@ -10,6 +10,9 @@ import streamlit as st
 import joblib
 
 
+image = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fhub.zum.com%2F3hoursahead%2F90507&psig=AOvVaw2cHqqs5KGMMxrquFhziPBk&ust=1669785408553000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLimm8PR0vsCFQAAAAAdAAAAABAR'
+st.image(image)
+
 st.sidebar.markdown("# Practice")
 st.title("항공기 만족도 예측 Practice")
 st.subheader("6가지의 머신러닝 모델을 활용하여 변수들을 바꾸어 예측해보기")
