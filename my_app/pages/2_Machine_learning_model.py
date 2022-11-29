@@ -19,7 +19,7 @@ import shap
 
 # streamlit 앱 제목
 st.markdown('**<center><span style="color: #000000; font-size:250%; ">Machine Learning Model view</span></center>**', unsafe_allow_html=True)
-st.markdown('<hr>* * *</hr>')
+st.markdown('---')
 
 # 데이터 읽어오기
 airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/train.csv")
