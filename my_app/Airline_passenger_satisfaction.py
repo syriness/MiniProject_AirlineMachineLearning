@@ -21,16 +21,16 @@ image = 'https://image.cnbcfm.com/api/v1/image/107124573-1664221269888-gettyimag
 st.image(image)
 
 # streamlit 앱 제목
-st.title("항공사 고객 만족도 Machine Learning Data view")
+st.markdown('**<center><span style="color: #000000; font-size:250%; line-height:1.0">Airline passenger satisfaction Machine Learning Data view </span></center>**', unsafe_allow_html=True)
 
 # 데이터 읽어오기
 airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/train.csv")
 
-st.header("데이터 확인")
+st.markdown('**<center><span style="color: #666666; font-size:100%; line-height:2.2">raw data</span></center>**', unsafe_allow_html=True)
 #st.table(airline.head(10))
 st.dataframe(data=airline.head(10), width=None, height=None,  use_container_width=False)
 
-st.write("원 데이터셋에 약 10만개의 데이터가 있으며, 훈련셋에는 약 26,000개의 데이터가 있다.")
+st.write("*원 데이터셋에 약 10만개의 데이터가 있으며, 훈련셋에는 약 26,000개의 데이터가 있다.")
 
 # st.write("")
 # st.write("")
