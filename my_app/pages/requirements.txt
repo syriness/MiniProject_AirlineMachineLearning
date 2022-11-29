@@ -19,3 +19,5 @@ Image
 xgboost
 xgb
 shap
+pyplot
+matplotlib.pyplot as plt
