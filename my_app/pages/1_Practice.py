@@ -83,12 +83,12 @@ st.markdown('**<center><span style="color: MidnightBlue; font-size:250%">Thank Y
 #    st.sidebar.markdown("# Page 2 ❄️")
 
        
-page_names_to_funcs = {
-    "Practice": Practice,
-    "APP": APP,
-}
+#page_names_to_funcs = {
+#    "Practice": Practice,
+#    "APP": APP,
+#}
 
-selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
-page_names_to_funcs[selected_page]()
-# Contents of ~/my_app/main_page.py
+#selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+#page_names_to_funcs[selected_page]()
+## Contents of ~/my_app/main_page.py
 
