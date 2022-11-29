@@ -14,8 +14,9 @@ image = 'https://www.sisajournal.com/news/photo/201907/188115_92491_371.jpg'
 st.image(image)
 
 st.sidebar.markdown("# Practice")
-st.title("항공기 만족도 예측 Practice")
-st.subheader("6가지의 머신러닝 모델을 활용하여 변수들을 바꾸어 예측해보기")
+st.markdown('**<center><span style="color: #000000; font-size:250%; line-height:1.2">항공기 만족도 예측 </span></center>**', unsafe_allow_html=True)
+st.markdown('<center><span style="color: #999966; font-size:150%">6가지 머신러닝 모델 활용으로 변수들을 바꾸어 예측해보기</span></center>', unsafe_allow_html=True)
+#st.markdown('**<center><span style="color: #000000; font-size:150%"> </span></center>**', unsafe_allow_html=True)
 
 # 첫 번째 행
 r1_col1, r1_col2, r1_col3 = st.columns(3)
@@ -79,7 +80,6 @@ for i in range(1, 7):
             st.metric(result_list[i-1], "Dissatisfied")
     
 st.write("")                              
-st.markdown('**<center><span style="color: MidnightBlue; font-size:250%">Thank You!</span></center>**', unsafe_allow_html=True)
 
 #def page2():
 #    st.markdown("# Page 2 ❄️")
