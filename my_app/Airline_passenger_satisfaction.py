@@ -1,19 +1,21 @@
 # Contents of ~/my_app/Airline_passenger_satisfaction.py
 import streamlit as st
 
-# # 필요 라이브러리 import
-# import pandas as pd
-# import matplotlib.pyplot as plt
-# import streamlit as st
-# import kmeans
-# import prepro
-# import logic
-# import tree
-# import forest
-# import xg
-# import knn
-# import joblib
-# from PIL import Image
+# 필요 라이브러리 import
+import pandas as pd
+import matplotlib.pyplot as plt
+import streamlit as st
+import kmeans
+import prepro
+import logic
+import tree
+import forest
+import xg
+import knn
+import joblib
+from PIL import Image
+import xgboost as xgb
+import shap
 
 # streamlit 앱 제목
 st.title("항공사 고객 만족도 Machine Learning")
@@ -111,13 +113,13 @@ st.write("")
 # Contents of ~/my_app/main_page.py
 
 
-def Practice():
-   st.markdown("# Practice")
-   st.sidebar.markdown("# Page 2 ❄️")
+#def Practice():
+#   st.markdown("# Practice")
+#   st.sidebar.markdown("# Page 2 ❄️")
 
-page_names_to_funcs = {
-    "Practice": Practice,
-}
+#page_names_to_funcs = {
+#    "Practice": Practice,
+#}
 
 #selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
 #page_names_to_funcs[selected_page]()
