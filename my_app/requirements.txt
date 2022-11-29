@@ -7,16 +7,6 @@ joblib
 matplotlib==3.5.2
 scikit-learn
 joblib
-PIL
 xgboost
 shap
 lightgbm
-kmeans
-prepro
-logic
-tree
-forest
-xg
-knn
-Image
-
