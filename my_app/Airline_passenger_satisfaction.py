@@ -26,8 +26,7 @@ st.markdown('**<center><span style="color: #000000; font-size:250%; line-height:
 
 # 데이터 읽어오기
 airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/train.csv")
-st.markdown('**<center><span style="color: #666666; font-size:100%;">-raw data-</span></center>**', unsafe_allow_html=True)
-st.markdown('<center><span style="color: #666666; font-size:100%;">원 데이터셋에 약 10만개의 데이터가 있으며, 훈련셋에는 약 26,000개의 데이터가 있다.</span></center>', unsafe_allow_html=True)
+st.markdown('<center><span style="color: #666666; font-size:100%;">raw data: 원 데이터셋에 약 10만개의 데이터가 있으며, 훈련셋에는 약 26,000개의 데이터가 있다.</span></center>', unsafe_allow_html=True)
 #st.table(airline.head(10))
 st.dataframe(data=airline.head(10), width=None, height=None,  use_container_width=False)
 
