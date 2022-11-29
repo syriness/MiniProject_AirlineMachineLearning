@@ -21,7 +21,7 @@ image = 'https://image.cnbcfm.com/api/v1/image/107124573-1664221269888-gettyimag
 st.image(image)
 
 # streamlit 앱 제목
-st.markdown('**<center><span style="color: #000000; font-size:250%; ">Airline passenger satisfaction  Machine Learning Data view</span></center>**', unsafe_allow_html=True)
+st.markdown('**<center><span style="color: #000000; font-size:250%; ">Airline passenger satisfaction <br>Machine Learning Data view</span></center>**', unsafe_allow_html=True)
 st.markdown('---')
 # 데이터 읽어오기
 airline = pd.read_csv("https://raw.githubusercontent.com/syriness/MiniProject_AirlineMachineLearning/main/train.csv")
