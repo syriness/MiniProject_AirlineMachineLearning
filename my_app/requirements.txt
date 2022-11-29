@@ -11,3 +11,12 @@ PIL
 xgboost
 shap
 lightgbm
+kmeans
+prepro
+logic
+tree
+forest
+xg
+knn
+Image
+
