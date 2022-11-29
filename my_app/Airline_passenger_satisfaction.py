@@ -21,7 +21,7 @@ image = 'https://image.cnbcfm.com/api/v1/image/107124573-1664221269888-gettyimag
 st.image(image)
 
 # streamlit 앱 제목
-st.markdown('**<center><span style="color: #000000; font-size:250%; line-height:1.0;">Airline passenger satisfaction</span></center>**', unsafe_allow_html=True)
+st.markdown('**<center><span style="color: #000000; font-size:250%; line-height:0.5;">Airline passenger satisfaction</span></center>**', unsafe_allow_html=True)
 st.markdown('**<center><span style="color: #000000; font-size:250%;">Machine Learning Data view </span></center>**', unsafe_allow_html=True)
 
 # 데이터 읽어오기
