@@ -9,7 +9,7 @@ import numpy as np
 import streamlit as st
 import joblib
 
-
+st.set_page_config(layout="wide")
 image = 'https://www.sisajournal.com/news/photo/201907/188115_92491_371.jpg'
 st.image(image)
 
